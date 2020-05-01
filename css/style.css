@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+@font-face {
+    font-family: 'Chalk';
+    src: url('https://junokili.github.io/junokili/school-for-the-poor/css/fonts/dkcrayoncrumble-ddll-webfont.woff2') format('woff2'),
+         url('https://junokili.github.io/junokili/school-for-the-poor/css/fonts/dkcrayoncrumble-ddll-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Chalk', 'Pangolin', cursive;
+    color: white;
+}
+
+.medium-text {
+    font-family: 'Chalk', 'Pangolin', cursive;
+    font-size: 32px;
+    text-align: center;
+}
+
+.chalkboard {
+    background: url("../images/chalkboard.jpg");
+    background-position: relative;
+    padding-top: 100px;
+}
+
+.long-divider {
+    background: url("../images/long-divider-1018.svg");
+    background-repeat: no-repeat;
+    margin-left: -2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*---------------- navbar -------------------*/
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 101;
+}
+
+.navbar {
+    border: 0;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.navbar .navbar-logo {
+    font-family: 'Chalk', 'Pangolin', cursive;
+    font-size: 42px;
+    color: white;
+    text-decoration: none;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+}
+
+.navbar .navbar-logo:hover {
+    color: #f21a1d;
+}
+
+.navbar-nav {
+    text-align: right;
+}
+
+.navbar .navbar-toggler {
+    border:0;
+}
+
+button.navbar-toggler:focus { 
+    outline: none;
+} 
+
+.fa-bars {
+    border: none;
+    font-size: 26px;
+    color: white;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+}
+
+.fa-bars:hover {
+    color: #f21a1d;
+}
+
+ul.navbar-nav > li.mt-10 {
+    margin-top: 10px;
+    }
+
+ul.navbar-nav > li.mb-10 {
+    margin-bottom: 10px;
+}
+
+ul.navbar-nav > li.nav-item > a.custom-link {
+    padding-left: 20x;
+    padding-right: 20px;
+    text-align: right;
+    font-size: 24px;
+    color: white;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+}
+
+ul.navbar-nav > li.nav-item > a.custom-link:hover {
+    color: #f21a1d;
+    text-decoration: none;
+}
+
+.memory-game {
+    padding-bottom: 20px;
+}
+
+/*---------------- footer ----------------- */
+
+.row {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.footer {
+    min-height: 100px;
+    padding-top:20px;
+    border-right: solid 1px #ffffff;
+    text-align: center;
+}
+
+.footer.fixed {
+    height: 250px;
+    padding-top:20px;
+    border-right: solid 1px #ffffff;
+    text-align: center;
+}
+
+.footer .fa {
+    margin-left: 20px;
+    margin-right: 4px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.footer .fa-video {
+    margin-left: 20px;
+    margin-right: 4px;
+    font-size: 100px;
+    color: #fff;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+}
+
+.footer .fa-video:hover {
+    color: #f21a1d;
+}
+
+.movie-icon {
+    max-height: 100px;
+}
+
+ul.social > li > a > i {
+    margin: 15px;
+    font-size: 38px;
+    color: #fff;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+}
+
+ul.social > li > a > i:hover {
+    color: #f21a1d;
+}
+
+
+
