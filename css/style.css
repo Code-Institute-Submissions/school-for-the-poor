@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Chalk';
-    src: url('https://junokili.github.io/school-for-the-poor/blob/master/css/fonts/dkcrayoncrumble-ddll-webfont.woff2') format('woff2'),
+    src: url('https://junokili.github.io/school-for-the-poor/css/fonts/dkcrayoncrumble-ddll-webfont.woff2') format('woff2'),
          url('https://junokili.github.io/school-for-the-poor/css/fonts/dkcrayoncrumble-ddll-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -16,7 +16,7 @@ body {
 
 .medium-text {
     font-family: 'Chalk', 'Pangolin', cursive;
-    font-size: 32px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -70,7 +70,7 @@ body {
 
 .navbar .navbar-logo {
     font-family: 'Chalk', 'Pangolin', cursive;
-    font-size: 42px;
+    font-size: 54px;
     color: white;
     text-decoration: none;
     transition-property: color;
@@ -143,7 +143,7 @@ ul.navbar-nav > li.nav-item > a.custom-link {
     padding-left: 20x;
     padding-right: 20px;
     text-align: right;
-    font-size: 24px;
+    font-size: 32px;
     color: white;
     transition-property: color;
     -webkit-transition-property: color;
@@ -175,22 +175,54 @@ div#map {min-height: 360px;}
 
 /*---------------- scramble-game ----------------- */
 
-#scramble-game {
-    width: 800px;
-    height: 200px;
+#memory-game {
     margin: auto;
     padding: 20px;
+    text-align: center;
 }
 
-#scramble-game > div {
+#memory-game > div {
     background: #f21a1d;
-    border-radius: 5%;
-    width: 80px;
-    height: 40px;
+    border-radius: 15%;
+    width: 120px;
+    height: 70px;
     margin: 10px;
-    padding: 15px;
-    font-size: 40px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
     cursor: grab;
+    text-align: center;
+}
+#buttonDiv {
+    height: 70px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+button.start {
+    background: #f21a1d;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 15%;
+    border-color: #f21a1d;
+    text-align: center;
+    vertical-align: center;
+    font-size: 24px;
+}
+
+button.start:focus {
+    outline: none;
+}
+
+button.startClicked {
+    background: white;
+    color: #f21a1d;
+    border-color: white;
+}
+
+alert {
     text-align: center;
 }
 
