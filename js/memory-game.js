@@ -18,7 +18,7 @@ function newProblem(){
     var output = '';
     gameQuestion.scramble();
     for (var i = 0; i < gameQuestion.length; i++){
-        output += '<div id="tile_'+i+'" onclick="revealTile(this,\''+gameQuestion[i]+'\')"></div>';
+        output += '<div class="game-tile" id="tile_'+i+'" onclick="revealTile(this,\''+gameQuestion[i]+'\')"></div>';
     }
     document.getElementById("memory-game").innerHTML = output;
 }
@@ -26,7 +26,7 @@ function newProblem(){
 function revealTile(tile,val){
 
      //making a move
-    if (tile.innerHTML == "" && tileValue.length < 2){
+    if (tile.innerHTML == "" && tileValue.length < 2){        
             tile.style.background = "#fff";
             tile.style.color = "#f21a1d";
             tile.innerHTML = val;
@@ -59,7 +59,11 @@ function revealTile(tile,val){
                         };
                         setTimeout(restart, 500);
                         setTimeout(function() { 
-                        alert("Congratulations!\n"+ans+"\nClick Start for next question"); }, 500);
+                        swal({
+                            title: "Congratulations!",
+                            text: ans,
+                            icon: "success",
+                        }); }, 500);
                         }
 
                     //no
@@ -81,3 +85,4 @@ function revealTile(tile,val){
                 }
             }
         }
+
