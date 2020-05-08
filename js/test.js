@@ -1,5 +1,3 @@
-let requestURL = 'https://github.com/junokili/school-for-the-poor/blob/master/data/configuration.json';
-
 function getData(requestURL, cb) {
     var xhr = new XMLHttpRequest();
 
@@ -61,3 +59,5 @@ function writeToDocument(url) {
         el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g, "") ;
     });
 }
+
+let requestURL = 'https://junokili.github.io/school-for-the-poor/data/configuration.json';
