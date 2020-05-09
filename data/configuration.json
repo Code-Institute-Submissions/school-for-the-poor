@@ -1,11 +1,14 @@
-{"problem" : [
-{"statement": "What is your name ?",
-"answers": ["What is your name?"],
-"level": "beginner"},
-{"statement": "Will you help me with my homework ?",
-"answers": ["Will you help me with my homework?"],
-"level": "intermediate"},
-{"statement": "Should we have gone to school yesterday ?",
-"answers": ["Should we have gone to school yesterday?"],
-"level": "advanced"}
+{"problems" : [
+{"level": "beginner",
+"statement": "What is your name ?",
+"answers": ["What is your name?"]
+},
+{"level": "intermediate",
+"statement": "Will you help me with my homework ?",
+"answers": ["Will you help me with my homework?"]
+},
+{"level": "advanced",
+"statement": "Should we have gone to school yesterday ?",
+"answers": ["Should we have gone to school yesterday?"]
+}
 ]}
