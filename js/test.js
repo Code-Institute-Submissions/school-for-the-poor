@@ -1,63 +1,46 @@
-function getData(requestURL, cb) {
+function writeToDocument(){
+    var section = document.querySelector("section");
+
+    var requestURL = 'https://junokili.github.io/school-for-the-poor/data/configuration.json';
     var xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            cb(JSON.parse(this.responseText));
-        }
-    };
+
 xhr.open('GET', requestURL);
-xhr.responseType = 'json';
+xhr.responseType = 'text';
 xhr.send();
+
+xhr.onload = function(){
+    var problemDataText = xhr.response;
+    var problemData = JSON.parse(problemDataText);
+    showProblems(problemData);
 }
+    function showProblems(jsonObj){
+        var problems = jsonObj["problems"];
 
-function getTableHeaders(obj) {
-    var tableHeaders = [];
+        for(let i = 0; i < problems.length; i++){
+        var myArticle = document.createElement('article');
+        var myH2 = document.createElement('h2');
+        var myPara1 = document.createElement('p');
+        var myPara2 = document.createElement('p');
+        var myList = document.createElement('ul');
 
-    Object.keys(obj).forEach(function(key) {
-        tableHeaders.push(`<td>${key}</td>`);
-    });
+        myH2.textContent = problems[i].level;
+        myPara1.textContent = "Question: " + problems[i].statement;
+        myPara2.textContent = "Answers: ";
 
-    return `<tr>${tableHeaders}</tr>`;
-}
+        var answerArray = problems[i].answers;
+        for(let j = 0; j < answerArray.length; j++){
+            const listItem = document.createElement('li');
+            listItem.textContent = answerArray[j];
+            myList.appendChild(listItem);
+        }
 
-function generatePaginationButtons(next, prev) {
-    if (next && prev) {
-        return `<button onclick="writeToDocument('${prev}')">Previous</button>
-                <button onclick="writeToDocument('${next}')">Next</button>`;
-    } else if (next && !prev) {
-        return `<button onclick="writeToDocument('${next}')">Next</button>`;
-    } else if (!next && prev) {
-        return `<button onclick="writeToDocument('${prev}')">Previous</button>`;
+        myArticle.appendChild(myH2);
+        myArticle.appendChild(myPara1);
+        myArticle.appendChild(myPara2);
+        myArticle.appendChild(myList);
+
+        section.appendChild(myArticle);
+      }
     }
 }
-
-function writeToDocument(url) {
-    var tableRows = [];
-    var el = document.getElementById("data");
-
-    getData(url, function(data) {
-        var pagination = "";
-
-        if (data.next || data.previous) {
-            pagination = generatePaginationButtons(data.next, data.previous);
-        }
-        data = data.results;
-        var tableHeaders = getTableHeaders(data[0]);
-
-        data.forEach(function(item) {
-            var dataRow = [];
-
-            Object.keys(item).forEach(function(key) {
-                var rowData = item[key].toString();
-                var truncatedData = rowData.substring(0, 15);
-                dataRow.push(`<td>${truncatedData}</td>`);
-            });
-            tableRows.push(`<tr>${dataRow}</tr>`);
-        });
-
-        el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g, "") ;
-    });
-}
-
-let requestURL = 'https://junokili.github.io/school-for-the-poor/data/configuration.json';

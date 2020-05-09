@@ -192,7 +192,24 @@ div#map {min-height: 360px;}
     font-size: 32px;
     cursor: grab;
     text-align: center;
+    vertical-align: top;
 }
+
+#memory-game > div.tileClicked {
+    background: #fff;
+    color: #f21a1d;
+    border-radius: 15%;
+    width: 120px;
+    height: 70px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    cursor: grab;
+    text-align: center;
+    vertical-align: top;
+}
+
 #buttonDiv {
     height: 70px;
     margin: auto;
@@ -220,10 +237,6 @@ button.startClicked {
     background: white;
     color: #f21a1d;
     border-color: white;
-}
-
-alert {
-    text-align: center;
 }
 
 /*---------------- footer ----------------- */
@@ -307,5 +320,90 @@ ul.social > li > a > i:hover {
     color: #f21a1d;
 }
 
+/*---------------------------- media query ------------------*/
 
+@media(max-width: 600px){
+    
+    .chalkboard {
+        background: url("../images/chalkboard.jpg");
+        background-position: relative;
+        padding-top: 100px;
+    }
 
+    .medium-text {
+        font-family: 'Chalk', 'Pangolin', cursive;
+        font-size: 32x;
+        text-align: center;
+    }
+    .vertical-divider { 
+        border-right: 10px solid transparent;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        background: rgb(0,0,0,0.8);
+    }
+
+    .navbar .navbar-logo {
+        font-family: 'Chalk', 'Pangolin', cursive;
+        font-size: 38px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        transition-property: color;
+        -webkit-transition-property: color;
+        -moz-transition-property: color;
+        -o-transition-property: color;
+        -ms-transition-property: color;
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+    }
+
+    .navbar .navbar-logo:hover {
+        color: #f21a1d;
+    }
+
+    #memory-game {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    #memory-game > div {
+    background: #f21a1d;
+    border-radius: 15%;
+    width: 60px;
+    height: 40px;
+    margin: 7px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 18px;
+    cursor: grab;
+    text-align: center;
+    vertical-align: top;
+}
+
+#memory-game > div.tileClicked {
+    background: #fff;
+    color: #f21a1d;
+    border-radius: 15%;
+    width: 60px;
+    height: 40px;
+    margin: 7px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 18px;
+    cursor: grab;
+    text-align: center;
+    vertical-align: top;
+}
+}

@@ -25,18 +25,16 @@ function newProblem(){
         output += '<div class="game-tile" id="tile_'+i+'" onclick="revealTile(this,\''+origArray[i]+'\')"></div>';
     }
     document.getElementById("memory-game").innerHTML = output;
-    var scrambledMap = origArray.map((val2, b) => {
-    return {value: val2, index: b};
-
+    var scrambledMap = origArray.map((val2) => {
+    return {value: val2};
     });
         console.log(scrambledMap);
-
 }
 
-function revealTile(tile,val){
+function revealTile(tile,val,scrambledMap){
 
      //making a move
-    if (tile.innerHTML == "" && tileValue.length < 2){        
+    if (tile.innerHTML == "" && tileValue.length < origArray.length){        
             tile.style.background = "#fff";
             tile.style.color = "#f21a1d";
             tile.innerHTML = val;
@@ -45,6 +43,12 @@ function revealTile(tile,val){
             if (tileValue.length == 0){
                 tileValue.push(val);
                 tileID.push(tile.id);
+
+//is it the correct first word?
+var mapIndex = document.write(scrambledMap.get(0));
+        console.log(mapIndex);
+                if (tileValue === mapIndex){console.log(true)}
+
             }
             //second move
             else if (tileValue.length == 1){
@@ -63,16 +67,20 @@ function revealTile(tile,val){
                     //is problem solved?
                     //yes
                     if (tilesTurned == gameQuestion.length){
-                        function restart() {
+                        function endProblem() {
                         var element = document.getElementById("button");element.classList.toggle("startClicked");
                          if (element.innerHTML === "Help"){
                             element.innerHTML = "Start";
                         } else {
                             element.innerHTML = "Help";}
                         };
-                        setTimeout(restart, 500);
+                        setTimeout(endProblem, 500);
                         setTimeout(function() { 
-                        alert("Congratulations!\n"+ans+"\nClick Start for next question"); }, 500);
+                        swal({
+                            title: "Congratulations!",
+                            text: ans,
+                            icon: "success",
+                        }); }, 500);
                         }
 
                     //no
