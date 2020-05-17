@@ -14,9 +14,17 @@ body {
     color: white;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .medium-text {
-    font-family: 'Chalk', 'Pangolin', cursive;
     font-size: 40px;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 26px;
     text-align: center;
 }
 
@@ -45,8 +53,8 @@ body {
     background-repeat: no-repeat;
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }
 
 
@@ -181,6 +189,30 @@ div#map {min-height: 360px;}
     text-align: center;
 }
 
+button.level {
+    color: white;
+    width: 140px;
+    height: 70px;
+    border-radius: 15%;
+    text-align: center;
+    vertical-align: center;
+    font-size: 28px;
+    display: inline-block;
+    margin: 20px;
+}
+
+#beginner {
+    background-color: #fef900;
+}
+
+#intermediate {
+    background-color: #03dddc;
+}
+
+#advanced {
+    background-color: #ff822e;
+}
+
 #memory-game > div {
     background: #f21a1d;
     border-radius: 15%;
@@ -195,6 +227,19 @@ div#map {min-height: 360px;}
     vertical-align: top;
 }
 
+#memory-game > div.unClicked {
+    background: #f21a1d;
+    border-radius: 15%;
+    width: 120px;
+    height: 70px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    cursor: grab;
+    text-align: center;
+    vertical-align: top;
+}
 #memory-game > div.tileClicked {
     background: #fff;
     color: #f21a1d;
@@ -239,6 +284,72 @@ button.startClicked {
     border-color: white;
 }
 
+
+/*---------------- teachers ----------------- */
+
+.teachers {
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.teacher-profile {
+  background-color: transparent;
+  height: 300px;
+  width: 300px;
+  perspective: 1000px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.teacher-profile-rotate {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.teacher-profile:hover .teacher-profile-rotate {
+    transform: rotateY(180deg);
+}
+
+#teacher-image-1 {
+    background-image: url("../images/teacher-image-1.jpg");
+}
+
+#teacher-image-2 {
+    background-image: url("../images/teacher-image-2.jpg");
+}
+
+#teacher-image-3 {
+    background-image: url("../images/teacher-image-3.jpg");
+}
+
+.teacher-image {
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.teacher-info {
+    background-color: #f21a1d;
+    padding: 25px;
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+}
+
+
 /*---------------- footer ----------------- */
 
 .row {
@@ -247,14 +358,16 @@ button.startClicked {
 }
 
 .footer {
-    min-height: 100px;
-    padding-top:20px;
+    min-height: 220px;
+    padding-top:0px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
 .footer.fixed {
-    height: 250px;
-    padding-top:20px;
+    height: 220px;
+    padding-top:0px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
@@ -269,6 +382,7 @@ button.startClicked {
     margin-left: 20px;
     margin-right: 4px;
     font-size: 100px;
+    padding-bottom: 20px;
     color: #fff;
     transition-property: color;
     -webkit-transition-property: color;
@@ -335,9 +449,9 @@ ul.social > li > a > i:hover {
         font-size: 32x;
         text-align: center;
     }
+
     .vertical-divider { 
-        border-right: 10px solid transparent;
-        padding: 15px;
+        border-right: 0;
     }
 
     .navbar-nav {
