@@ -36,17 +36,31 @@ function start() {
       origArray[i] +
       "')\"></div>";
   }
-  document.getElementById("sentence-game").innerHTML = output;
+  document.getElementById("memory-game").innerHTML = output;
+
   console.log(origArray);
-                setTimeout(function () {
-                swal({
-                  title: ans,
-                  timer: 3000
-                });
-              }, 500);
+
+  var ansString = origArray.join(" ");
+  setTimeout(function () {
+    swal({
+      title: ansString,
+      timer: 3000,
+    });
+  }, 500);
 }
 
 function revealTile(tile, val) {
+  var element = document.getElementsByTagName("button");
+  var ansString = origArray.join(" ");
+  if (element.innerHTML === "Help") {
+    element.onclick = function () {
+      swal({
+        title: ansString,
+        timer: 3000,
+      });
+    };
+  }
+
   if (tile.innerHTML == "" && tileValue.length < origArray.length) {
     //first move
     tile.style.background = "#fff";
@@ -82,45 +96,51 @@ function revealTile(tile, val) {
               (testVal === undefined && !newMap.has(key))
             ) {
               console.log("not equal to");
-              function restart() {
+              restartTryAgain();
+              function restartTryAgain() {
                 var element = document.getElementById("button");
                 element.classList.toggle("startClicked");
                 if (element.innerHTML === "Help") {
-                  element.innerHTML = "Start";
+                  element.innerHTML = "Try again";
                 } else {
                   element.innerHTML = "Help";
                 }
+                if ((element.innerHTML = "Try again")) {
+                  tileValue = [];
+                  tileID = [];
+                }
+                setTimeout(function () {
+                  swal({
+                    title: "Try again",
+                    icon: "error",
+                  });
+                }, 500);
                 tileValue = [];
                 tileID = [];
               }
-              setTimeout(restart, 500);
-              setTimeout(function () {
-                swal({
-                  title: "Try again",
-                  icon: "error",
-                });
-              }, 500);
             } else {
               console.log("equal to");
-              function restart() {
+              restartNext();
+              function restartNext() {
                 var element = document.getElementById("button");
                 element.classList.toggle("startClicked");
                 if (element.innerHTML === "Help") {
-                  element.innerHTML = "Start";
+                  element.innerHTML = "Next";
                 } else {
                   element.innerHTML = "Help";
                 }
-                tileValue = [];
-                tileID = [];
+                if ((element.innerHTML = "Next")) {
+                  tileValue = [];
+                  tileID = [];
+                }
+                setTimeout(function () {
+                  swal({
+                    title: "Congratulations!",
+                    text: ans,
+                    icon: "success",
+                  });
+                }, 500);
               }
-              setTimeout(restart, 500);
-              setTimeout(function () {
-                swal({
-                  title: "Congratulations!",
-                  text: ans,
-                  icon: "success",
-                });
-              }, 500);
             }
           }
         }
