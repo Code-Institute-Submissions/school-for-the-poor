@@ -1,0 +1,86 @@
+{
+    "beginner": {
+        "data": [
+            {
+                "statement": "What is your name ?",
+                "answers": [
+                    "What is your name?"
+                ]
+            },
+            {
+                "statement": "Where do you live ?",
+                "answers": [
+                    "Where do you live?"
+                ]
+            },
+            {
+                "statement": "How old are you ?",
+                "answers": [
+                    "How old are you?"
+                ]
+            },
+            {
+                "statement": "Do you have any brothers or sisters ?",
+                "answers": [
+                    "Do you have any brothers or sisters?"
+                ]
+            }
+        ]
+    },
+    "intermediate": {
+        "data": [
+            {
+                "statement": "Will you help me with my homework ?",
+                "answers": [
+                    "Will you help me with my homework?"
+                ]
+            },
+            {
+                "statement": "What are you going to do tomorrow ?",
+                "answers": [
+                    "What are you going to do tomorrow?"
+                ]
+            },
+            {
+                "statement": "It was not very good , was it ?",
+                "answers": [
+                    "It was not very good, was it?"
+                ]
+            },
+            {
+                "statement": "If I go will you come too ?",
+                "answers": [
+                    "If I go, will you come too?"
+                ]
+            }
+        ]
+    },
+    "advanced": {
+        "data": [
+            {
+                "statement": "Should we have gone to school yesterday ?",
+                "answers": [
+                    "Should we have gone to school yesterday?"
+                ]
+            },
+            {
+                "statement": "Have you not done your homework yet ?",
+                "answers": [
+                    "Have you not done your homework yet?"
+                ]
+            },
+            {
+                "statement": "Who was supposed to have done that ?",
+                "answers": [
+                    "Who was supposed to have done that?"
+                ]
+            },
+            {
+                "statement": "Why did you tell me you had done it ?",
+                "answers": [
+                    "Why did you tell me you had done it?"
+                ]
+            }
+        ]
+    }
+}
