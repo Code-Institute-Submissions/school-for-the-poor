@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet"
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,14 +26,16 @@
             data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span><i class="fa fa-bars"></i></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul
               class="navbar-nav ml-auto"
               data-target=".navbar-collapse"
-              data-toggle="collapse">
+              data-toggle="collapse"
+            >
               <li class="nav-item mt-10">
                 <a class="custom-link" href="index.html">Home</a>
               </li>
@@ -55,39 +59,107 @@
     <!---------------- main section  ----------------->
     <div class="container-fluid chalkboard">
       <div class="long-divider"></div>
-      <h2 class="medium-text">Let's play !</h2>
-      <h2 class="sm-text">Can you remember and unscramble the questions?</h2>
-      <p class="sm-text hideable">First choose your level:</p>
-      <div id="level" class="col-12 col-md-8 mx-auto">
-        <button
-          class="button-level hideable"
-          id="beginner"
-          onclick="selectLevel('beginner')"
-        >
-          Beginner
-        </button>
-        <button
-          class="button-level hideable"
-          id="intermediate"
-          onclick="selectLevel('intermediate')"
-        >
-          Intermediate
-        </button>
-        <button
-          class="button-level hideable"
-          id="advanced"
-          onclick="selectLevel('advanced')"
-        >
-          Advanced
-        </button>
+      <h2 class="medium-text">Here's what our students have to say !</h2>
+      <br />
+      <div class="row mx-auto sm-text">
+        <div class="col-12 col-md-4 col-lg-2">
+          <div
+            class="testimonial-photo mx-auto rounded-circle"
+            id="nicho"
+            aria-hidden="true"
+          ></div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 testimonial-column">
+          <p>
+            <i class="fa fa-quote-right"></i> I love coming to Miss Kate's
+            Academy. It's so much fun!
+          </p>
+          <br />
+          <h4>- Nicho S.</h4>
+          <br />
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+          <div
+            class="testimonial-photo mx-auto rounded-circle"
+            id="kania"
+            aria-hidden="true"
+          ></div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 testimonial-column">
+          <p>
+            <i class="fa fa-quote-right"></i> If Kania had the choice she would
+            come to Miss Kate's Academy everyday!
+          </p>
+          <h4>- Kania K.'s mum</h4>
+          <br />
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+          <div
+            class="testimonial-photo mx-auto rounded-circle"
+            id="misaki"
+            aria-hidden="true"
+          ></div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 testimonial-column">
+          <p>
+            <i class="fa fa-quote-right"></i> I like to play games and talk
+            about dinosaurs when I'm here.
+          </p>
+          <br />
+          <h4>- Misaki J.</h4>
+          <br />
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+          <div
+            class="testimonial-photo mx-auto rounded-circle"
+            id="ruby"
+            aria-hidden="true"
+          ></div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 testimonial-column">
+          <p>
+            <i class="fa fa-quote-right"></i> I take adult conversation classes
+            here, and it's super interesting. I meet lots of new people and I've
+            improved a lot.
+          </p>
+          <br />
+          <h4>- Caca L.</h4>
+          <br />
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+          <div
+            class="testimonial-photo mx-auto rounded-circle"
+            id="arifin"
+            aria-hidden="true"
+          ></div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 testimonial-column">
+          <p>
+            <i class="fa fa-quote-right"></i> I come here with my kids and while
+            they're having fun with Miss Luluk, I take Business English classes
+            to help me communicate better at work.
+          </p>
+          <br />
+          <h4>- Arifin M.</h4>
+          <br />
+        </div>
+                <div class="col-12 col-md-4 col-lg-2">
+          <div
+            class="testimonial-photo mx-auto rounded-circle"
+            id="jemmy"
+            aria-hidden="true"
+          ></div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-4 testimonial-column">
+          <p>
+            <i class="fa fa-quote-right"></i> I started as a Beginner here. 
+            Now, thanks to the teachers, I am nearly ready to take my FCE exam to study in Australia.
+          </p>
+          <br />
+          <h4>- Jemmy I.</h4>
+          <br />
+        </div>
       </div>
-      <div id="memory-game"></div>
-      <div id="buttonDiv">
-        <button id="start-button" class="hidden" onclick="start()">
-          Start
-        </button>
-      </div>
-      <div id="completed"></div>
       <div class="long-divider"></div>
       ​
       <!---------------- footer ----------------->
@@ -162,9 +234,5 @@
       src="https://kit.fontawesome.com/1a963ad2a9.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- <script type="text/javascript" src="js/get-json-data-level.js"></script> -->
-    <script type="text/javascript" src="js/scramble-game-w-json.js"></script>
-    <!-- <script type="text/javascript" src="js/hide-div.js"></script> -->
   </body>
 </html>

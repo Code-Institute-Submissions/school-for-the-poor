@@ -9,15 +9,24 @@
   font-style: normal;
 }
 
-/*---------------- general body, background, image settings -------------------*/
+/*---------------- general body, background, structural image settings -------------------*/
 body {
   font-family: "Chalk", "Pangolin", cursive;
   color: white;
+  text-align: center;
 }
 .medium-text {
-  font-family: "Chalk", "Pangolin", cursive;
   font-size: 40px;
-  text-align: center;
+  font-weight: bold;
+}
+.bold {
+  font-weight: bold;
+}
+.sm-text {
+  font-size: 28px;
+}
+.small-text {
+  font-size: 18px;
 }
 .chalkboard {
   background: url("../images/chalkboard.jpg");
@@ -93,29 +102,6 @@ body {
 button.navbar-toggler:focus {
   outline: none;
 }
-.fa-bars {
-  border: none;
-  font-size: 26px;
-  color: white;
-  transition-property: color;
-  -webkit-transition-property: color;
-  -moz-transition-property: color;
-  -o-transition-property: color;
-  -ms-transition-property: color;
-  transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  -ms-transition-timing-function: ease-in-out;
-}
-.fa-bars:hover {
-  color: #f21a1d;
-}
 ul.navbar-nav > li.mt-10 {
   margin-top: 10px;
 }
@@ -149,67 +135,7 @@ ul.navbar-nav > li.nav-item > a.custom-link:hover {
   text-decoration: none;
 }
 
-/*---------------- schoools page ----------------- */
-div#map {
-  min-height: 360px;
-  max-width: 900px;
-}
-
-/*---------------- teachers page ----------------- */
-.teachers {
-    padding: 40px;
-    display: flex;
-    justify-content: space-around;
-}
-.teacher-profile {
-  background-color: transparent;
-  height: 300px;
-  width: 300px;
-  perspective: 1000px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.teacher-profile-rotate {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    transition: transform 1.5s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-.teacher-profile:hover .teacher-profile-rotate {
-    transform: rotateY(180deg);
-}
-#teacher-image-1 {
-    background-image: url("../images/teacher-image-1.jpg");
-}
-#teacher-image-2 {
-    background-image: url("../images/teacher-image-2.jpg");
-}
-#teacher-image-3 {
-    background-image: url("../images/teacher-image-3.jpg");
-}
-.teacher-image {
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-.teacher-info {
-    background-color: #f21a1d;
-    padding: 25px;
-    transform: rotateY(180deg);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-/*---------------- scramble-game ----------------- */
-
+/*---------------- memory-game ----------------- */
 .button-level {
   color: white;
   width: 150px;
@@ -220,27 +146,24 @@ div#map {
   font-size: 28px;
   margin: 15px;
 }
-
-.beginner {
+#beginner {
   background: #fef900;
   border-color: #fef900;
 }
-.intermediate {
+#intermediate {
   background: #03dddc;
   border-color: #03dddc;
 }
-.advanced {
+#advanced {
   background: #ff822e;
   border-color: #ff822e;
 }
-
 #buttonDiv {
   min-height: 70px;
   margin: auto;
   padding: 20px;
   text-align: center;
 }
-
 button.start {
   background: #f21a1d;
   color: white;
@@ -252,17 +175,9 @@ button.start {
   vertical-align: center;
   font-size: 24px;
 }
-
-button.startClicked {
-  background: white;
-  color: #f21a1d;
-  border-color: white;
-}
-
 button:focus {
   outline: none;
 }
-
 #memory-game {
   margin: auto;
   padding: 20px;
@@ -281,22 +196,6 @@ button:focus {
   text-align: center;
   vertical-align: top;
 }
-
-#memory-game > div.tileClicked {
-  background: #fff;
-  color: #f21a1d;
-  border-radius: 15%;
-  width: 120px;
-  height: 70px;
-  margin: 10px;
-  padding: 5px;
-  display: inline-block;
-  font-size: 32px;
-  cursor: grab;
-  text-align: center;
-  vertical-align: top;
-}
-
 .hidden {
   height: 0;
   width: 0;
@@ -307,7 +206,6 @@ button:focus {
   background: transparent;
   padding: 0;
 }
-
 .swal-text {
   font-size: 32px;
   display: block;
@@ -315,38 +213,147 @@ button:focus {
   text-align: center;
   color: #444756;
 }
-
 .swal-button {
   text-align: center;
   font-size: 24px;
   background: #a3dda2;
 }
-
 .swal-button--cancel {
   text-align: center;
   font-size: 24px;
   color: white;
   background: #f21a1d;
 }
-
 #completed {
   min-height: 70px;
   margin: auto;
   padding: 20px;
   text-align: center;
 }
-button.help {
-  background: #03dddc;
-  border-color: #03dddc;
-  color: white;
-  width: 100px;
-  height: 50px;
-  border-radius: 15%;
-  text-align: center;
-  vertical-align: center;
-  font-size: 24px;
+/*---------------- schoools page ----------------- */
+div#map {
+  min-height: 360px;
+  max-width: 900px;
+  margin-bottom: 20px;
 }
 
+p > a {
+  color: white;
+  transition-property: color;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -ms-transition-property: color;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+}
+p > a:hover {
+  color: #f21a1d;
+  text-decoration: none;
+}
+
+/*---------------- teachers page ----------------- */
+/*----------------flip box code modified from w3schools.com --------------*/
+.teachers {
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.teacher-profile {
+  background-color: transparent;
+  height: 300px;
+  width: 300px;
+  perspective: 1000px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.teacher-profile-rotate {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.teacher-profile:hover .teacher-profile-rotate {
+  transform: rotateY(180deg);
+}
+#teacher-image-1 {
+  background-image: url("../images/teacher-image-1.jpg");
+}
+#teacher-image-2 {
+  background-image: url("../images/teacher-image-2.jpg");
+}
+#teacher-image-3 {
+  background-image: url("../images/teacher-image-3.jpg");
+}
+.teacher-image {
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.teacher-info {
+  background-color: #f21a1d;
+  padding: 25px;
+  transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/*---------------- testimonials page ----------------- */
+#arifin {
+    background-image: url("../images/Arifin.png")
+}
+#ruby {
+    background-image: url("../images/Caca.png")
+}
+#kania {
+    background-image: url("../images/Kania.png")
+}
+#misaki {
+    background-image: url("../images/Misaki.png")
+}
+#nicho {
+    background-image: url("../images/Nicho.png");
+}
+#jemmy {
+    background-image: url("../images/Jemmy.png");
+}
+.testimonial-photo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 100px;
+    width: 100px;
+}
+.testimonial-column {
+    margin: 20px 0px;
+    max-height: 350px;
+}
+
+/*---------------- contact-us page ----------------- */
+#contact-form {
+    color: #786e65;
+    max-width: 650px;
+    margin: 0 auto;
+}
 /*---------------- footer ----------------- */
 .row {
   margin-left: -20px;
@@ -420,7 +427,61 @@ ul.social > li > a > i:hover {
 }
 
 /*---------------------------- media query ------------------*/
-
+@media (max-width: 800px) {
+  .navbar-nav {
+    text-align: center;
+    background: rgb(0, 0, 0, 0.8);
+  }
+  .navbar .navbar-logo {
+    font-family: "Chalk", "Pangolin", cursive;
+    font-size: 54px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 20px;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+  }
+  .navbar .navbar-logo:hover {
+    color: #f21a1d;
+  }
+  .fa-bars {
+    border: none;
+    font-size: 32px;
+    color: white;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+  }
+  .fa-bars:hover {
+    color: #f21a1d;
+  }
+}
 @media (max-width: 600px) {
   .chalkboard {
     background: url("../images/chalkboard.jpg");
@@ -431,14 +492,6 @@ ul.social > li > a > i:hover {
     font-family: "Chalk", "Pangolin", cursive;
     font-size: 32x;
     text-align: center;
-  }
-  .vertical-divider {
-    border-right: 10px solid transparent;
-    padding: 15px;
-  }
-  .navbar-nav {
-    text-align: center;
-    background: rgb(0, 0, 0, 0.8);
   }
   .navbar .navbar-logo {
     font-family: "Chalk", "Pangolin", cursive;
@@ -465,6 +518,10 @@ ul.social > li > a > i:hover {
   .navbar .navbar-logo:hover {
     color: #f21a1d;
   }
+  .vertical-divider {
+    border-right: 10px transparent;
+    padding: 15px;
+  }
   #memory-game {
     margin: 0px;
     padding: 0px;
@@ -472,20 +529,6 @@ ul.social > li > a > i:hover {
   }
   #memory-game > div {
     background: #f21a1d;
-    border-radius: 15%;
-    width: 60px;
-    height: 40px;
-    margin: 7px;
-    padding: 5px;
-    display: inline-block;
-    font-size: 18px;
-    cursor: grab;
-    text-align: center;
-    vertical-align: top;
-  }
-  #memory-game > div.tileClicked {
-    background: #fff;
-    color: #f21a1d;
     border-radius: 15%;
     width: 60px;
     height: 40px;
