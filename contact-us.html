@@ -9,38 +9,77 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Miss Kate's Academy</title>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("user_O4p1uzoCxjXWmUYNVNa1Y");
+})();
+    </script>
 </head>
 
 <body>
 	<!---------------- navbar ---------------->
-	<header>
-		<div class="container-fluid nav-container">
-			<nav class="navbar navbar-expand-md">
-				<a class="navbar-logo" href="index.html">Miss Kate's Academy</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span><i class="fa fa-bars"></i></span></button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav ml-auto" data-target=".navbar-collapse" data-toggle="collapse">
-						<li class="nav-item mt-10"><a class="custom-link" href="working.html">Home</a>
-						</li>
-						<li class="nav-item mt-10"><a class="custom-link" href="schools.html">Schools</a>
-						</li>
-						<li class="nav-item mt-10"><a class="custom-link" href="teachers.html">Teachers</a>
-						</li>
-						<li class="nav-item mt-10 mb-10"><a class="custom-link" href="contact-us.html">Contact Us</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
+	 <header>
+      <div class="container-fluid nav-container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-logo" href="index.html">Miss Kate's Academy</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span><i class="fa fa-bars"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul
+              class="navbar-nav ml-auto"
+              data-target=".navbar-collapse"
+              data-toggle="collapse">
+              <li class="nav-item mt-10">
+                <a class="custom-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mt-10">
+                <a class="custom-link" href="schools.html">Schools</a>
+              </li>
+              <li class="nav-item mt-10">
+                <a class="custom-link" href="teachers.html">Teachers</a>
+              </li>
+              <li class="nav-item mt-10">
+                <a class="custom-link" href="testimonials.html">Testimonials</a>
+              </li>
+              <li class="nav-item mt-10 mb-10">
+                <a class="custom-link" href="contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
     
     <!---------------- main section  ----------------->
 	<div class="container-fluid chalkboard">
 		<div class="long-divider"></div>
-		<h2 class="medium-text bold">Get in touch</h2>
-		<p class="medium-text">Call us on 085 777 7777<br> Or contact us using the form below:</p>
+		<h2 class="medium-text">Get in touch</h2>
+		<p class="sm-text" id="contact-info">Call us on 085 777 7777<br/>
+        Send us an email to info@misskatesacademy.com<br/> 
+        Or contact us using the form below:</p>
+<div class="row no-gutters my-auto mx-auto" id="contact-div">
+			<div class="col">
+					<form id="contact" onsubmit="return sendMail(this);">
+						<input type="text" id="name" placeholder="Name" name="name" required class="form-control">
+						<input type="email" id="email" placeholder="email" name="email" required class="form-control">
+						<input type="text" id="phone" placeholder="phone" name="phone" class="form-control"><br/>
+						<textarea rows="4" id="help" placeholder="How can we help you?" name="help" required class="form-control"></textarea><br/>
+						<div class="col">
+							<button class="start" type="submit">Send</button>
+						</div>
+					</form>
+			</div>
+		</div>
+        <div id="email-success"></div>
 			<div class="long-divider"></div>
 			​
 			<!---------------- footer ----------------->
@@ -101,6 +140,7 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script src="https://kit.fontawesome.com/1a963ad2a9.js" crossorigin="anonymous"></script>
+    <script src="js/send-email.js" type="text/javascript"></script>
+        <script src="js/removeFormSuccess.js" type="text/javascript"></script>
 </body>
-
 </html>

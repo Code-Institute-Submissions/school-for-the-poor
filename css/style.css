@@ -204,6 +204,8 @@ button:focus {
   margin: 0;
   border-color: transparent;
   background: transparent;
+  color: transparent;
+  background-color: transparent;
   padding: 0;
 }
 .swal-text {
@@ -349,7 +351,7 @@ p > a:hover {
 }
 
 /*---------------- contact-us page ----------------- */
-#contact-form {
+#contact {
     color: #786e65;
     max-width: 650px;
     margin: 0 auto;
