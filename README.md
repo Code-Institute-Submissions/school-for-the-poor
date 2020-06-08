@@ -1,18 +1,17 @@
 # **Miss Kate's Academy**
 
-# introduction
+# Introduction
 
 This project has been created so that users can play a game that tests their English language skills as well 
 as their memories. 
 It is currently based around rearranging questions, a notoriously difficult part of English language learning, 
 in the form of a memory game. The idea of using a game is to show that language learning can also be fun. 
-The site provides the information about the bricks and mortar English language schools, which the users can then 
-visit in person to talk face-to-face or contact through the site/by phone to enquire about English classes.  
+The site provides the information about the business's bricks and mortar English language schools. There are
+ contact details and a form so customers can quickly and easily contact the school. There is also a map 
+ showing the schools’ locations so potential students can visit. 
+ The site also provides some information about the teaching staff and testominals from students. 
 
-The site provides contact details and a form so customers can quickly and easily contact the school. 
-There is also a map showing the schools’ locations so potential students can visit. 
-
-# ux
+# UX
 
 -  **strategy** - the site is simple, with a fun design that reflects learning from a blackboard
 in an old school classroom. The instructions for the game are clear and it offers multiple levels to reflect
@@ -22,12 +21,11 @@ real-life classrooms won't be boring.
 The site is simple with functional content that achieves the site owner's and users' goals. The site is for B2C 
 customers, with a compelling design that stands out from other language centre sites. It's easy to
 contact the business to enquire about the bricks and mortar schools and lessons. 
-The target age range is broad due to a fun design for younger users (7/8+) to adult students who will 
-enjoy the nostalgia of blackboards and chalk from their school days. The game is available on the landing page, 
+The target age range is broad due to a fun design for younger users (7/8+) to adult leaners who will 
+enjoy the nostalgia of blackboards and chalk from their school days. The game is available on the home page, 
 so the user can play straight away. The gameplay is also simple enough that younger children can do it on their 
-own. Once a level is completed the user has a clear option to move up a level, at the same time (like once all 
-the levels are completed) the user is offered direction to the contact-us page to enquire about face-to-face 
-lessons.
+own. Once a level is completed the user has a clear option to move up a level, and once all 
+the levels are completed the user is offered direction to the contact-us page.
 For the user it’s easy to find out more about the schools and teachers as the menu and footer are always
  visible during the game, and by clicking either “Home” or the site logo/title the user is brought 
  back to the game. 
@@ -42,7 +40,7 @@ multiple pages and the key information for each pages’ content is clear. It is
 or how to get where you want to be. 
 The navbar and footer items change colour on hover, making it clear that they are clickable links. 
 - **skeleton** - information is revealed across a small number of pages, with the key feature of the site on 
-the homepage.  The limited number of pages keeps the site simple and easy to navigate beyond the game to find the 
+the home page.  The limited number of pages keeps the site simple and easy to navigate beyond the game to find the 
 information the user needs. Choices are simple so the user is not overwhelmed with options, and each click 
 provides specific content.
 - **surface** - the site has a clear identity presenting a connection between the blackboard background and chalk 
@@ -50,7 +48,7 @@ style font with school-learning. The colours, background and font are consistent
 including in the alerts. The elements and features are clear and legible. 
 The key elements are easy to recognise and disclosed progressively over different pages. 
 
-## user stories
+## User stories
 
 Site User wants to
 - play a game that challenges their memory and language skills 
@@ -92,14 +90,14 @@ Site Owner wants to
     - this is achieved with the contact us and schools pages, as well as including contact details in the footer
 
 
-# features
+# Features
 
 Features include:
 - **memory game** - the key feature of the site, to attract users and get them interested in practising their 
 language skills
 - **schools** - school info (map location and address) so users can continue their learning experience through 
 face-to-face classes
-- **teachers** - about the senior teaching team to personalise the business and show the level of experience 
+- **teachers** - info about the senior teaching team to personalise the business and show the level of experience 
 available
 - **testimonials** - the quality of services in the words of existing students with photos to personalise it
 - **contact us form** - so users can easily get in touch with the business about English classes
@@ -118,7 +116,7 @@ message will be sent to the customer to acknowledge receipt of the request.
 - **chat bot** - so user can have immediate and direct communication with the business  
 
 
-# technologies used
+# Technologies used
 
 - HTML: layout and content 
 - CSS: styling
@@ -129,43 +127,42 @@ message will be sent to the customer to acknowledge receipt of the request.
 - Bootstrap (CSS, JavaScript and JQuery) for the functionality of the navbar, hamburger menu 
     and the grid structuring of the site https://bootstrapcdn.com
 
-# testing
+# Testing
 
-- links
+- Links
 
 All links have been checked - links to sections in the menu and links to local images. 
 The links to external sites display a "coming soon" image as the social media for the business
 has not yet been created. 
 Internal links, such as button clicks, have all been verified that they perform as requested. 
 
-- contact us form
+- Contact us form
 
-On submission the form comes up with an error if it hasn't been filled in correctly (email address), 
-or if required information (name, email address and details in the text box) is missing. A success message is 
-displayed
+On submission the form comes up with an error if it hasn't been filled in correctly (e.g. email address), 
+or if required information (name, email address and details in the text box) is missing. 
 The form data is sent as an email to the site owner. The email received contains all the submitted data 
 (name, email, phone (optional) and the help request). Email receipt has been verified in the associated account. 
 A success message is shown only when the form is successfully submitted. 
 
-- responsiveness
+- Responsiveness
 
 At every stage of the development process the responsiveness of the site has been checked through chrome 
 developer tools.
-The grid structuring uses responsive parameters for display effectiveness in the divs that are created for
- game play, the info on the teachers page, testimonials, and also for the navbar e.g. collapsing below medium 
+The grid structuring uses responsive parameters for display effectiveness in e.g. the divs that are created for
+ game play, the info on the teachers page, testimonials, and also for the navbar collapsing below medium 
  screen widths. For example, the teacher info boxes are displayed as a single column on mobile and as two 
  columns for a medium screen width and three columns for a large screen width. There are also font size changes
   for increased responsiveness. 
 The site has also been tested on different browsers e.g. Chrome, Firefox, Edge.  
 
-- memory game
+- Memory game
 
 At all stages of the development testing was done using chrome developer tools to identify where issues 
 arose in the code. 
 There were several issues throughout the development of the game itself that had to be addressed or the code 
 otherwise manipulated. One example was the use of apostrophes in the questions, which resulted in a syntax error 
 when the value was pushed to the game variable. The questions had to be revised to not include contracted forms, 
-meaning from a language point of view the structures are limited and exclude e.g. tag questions.
+meaning from a language point of view the structures are limited and exclude e.g. tag questions and common negative forms.
 Also, the length of question was a factor, as questions became longer the game became almost impossible, 
 so a limit to the number of words had to be imposed at this stage. With an additional release including e.g. 
 a hint, then these could be added later.  
@@ -180,7 +177,7 @@ The html and css files were validated through the W3C Markup Validator and did n
 haven’t been resolved. The JavaScript files were validated through JSHint with the only errors being the use of 
 functionality only with ES6 (for which a comment was added) and apparent unused functions, however these are 
 all invoked within other functions or button clicks, likewise the apparent undefined variables are all defined 
-and utilised. I am not sure why these are coming out as errors. The two functions in scramble-game-w-json.js 
+and utilised. The two functions in scramble-game-w-json.js 
 referencing outer scoped variables work successfully, so haven’t been altered. 
 
 # deployment
@@ -188,7 +185,7 @@ referencing outer scoped variables work successfully, so haven’t been altered.
 The project can be accessed at https://github.com/junokili/school-for-the-poor
 
 The project was created through two separate GitHub repositories as, due to repeated attempts to resolve 
-blocking issues, the number of free hours of coding time in GitPod ran out. The project was transferred to a 
+coding issues, the number of free hours of coding time in GitPod ran out. The project was transferred to a 
 different account owned by the developer, and subsequently back again, as a new month’s allowance began. 
 This has resulted in the evident jumps in commit stages. (However, the interim repository can be found here:
  https://github.com/KateParkin/supreme-couscous)
@@ -198,7 +195,7 @@ The site was ultimately deployed on the developer's GitHub site through GitHub P
 An initial commit was made using the Code Institute template. 
 
 Development was then carried out in GitPod. During the build process files were incrementally added from GitPod 
-to the GitHub repository (git add) before being committed (git commit -m “info”) and pushed to GitHub (git push). 
+to the GitHub repository (git add) before being committed (git commit -m “various info”) and pushed to GitHub (git push). 
 
 Firstly, once an html framework was added this was committed. Subsequently, on creation of the additional page 
 frameworks, a “testing” page, a basic randomiser function and a testing code snippet to access and display the 
@@ -216,7 +213,7 @@ gameplay after an issue with the move up level function was identified. Outdated
 up the repository prior to submitting the project. A few additional commits were made after e.g. adding the 
 testimonial feature, editing the footer, validating the code, adding the original mockups etc. until a final 
 commit was made with the game working to the best of the developer’s current skills, the site pages completed 
-as planned and a completed README file. 
+as planned, a larger json database (but still small enough to allow a full game test) and a completed README file. 
 
 
 # credits
