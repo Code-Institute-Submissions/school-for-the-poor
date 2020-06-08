@@ -348,7 +348,6 @@ p > a:hover {
 }
 .testimonial-column {
   margin: 20px 0px;
-  max-height: 350px;
 }
 
 /*---------------- contact-us page ----------------- */
@@ -486,15 +485,14 @@ ul.social > li > a > i:hover {
   }
 }
 @media (max-width: 600px) {
-  .chalkboard {
-    background: url("../images/chalkboard.jpg");
-    background-position: center;
-    padding-top: 100px;
-  }
   .medium-text {
     font-family: "Chalk", "Pangolin", cursive;
     font-size: 32px;
     text-align: center;
+  }
+  .navbar-nav {
+    text-align: center;
+    background: rgb(0, 0, 0, 0.8);
   }
   .navbar .navbar-logo {
     font-family: "Chalk", "Pangolin", cursive;
@@ -502,6 +500,7 @@ ul.social > li > a > i:hover {
     color: white;
     text-decoration: none;
     text-align: center;
+    margin-left: 5px;
     transition-property: color;
     -webkit-transition-property: color;
     -moz-transition-property: color;
@@ -519,6 +518,29 @@ ul.social > li > a > i:hover {
     -ms-transition-timing-function: ease-in-out;
   }
   .navbar .navbar-logo:hover {
+    color: #f21a1d;
+  }
+  .fa-bars {
+    border: none;
+    font-size: 28px;
+    color: white;
+    transition-property: color;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    -ms-transition-property: color;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+  }
+  .fa-bars:hover {
     color: #f21a1d;
   }
   .vertical-divider {
@@ -542,5 +564,16 @@ ul.social > li > a > i:hover {
     cursor: grab;
     text-align: center;
     vertical-align: top;
+  }
+  button.start {
+    background: #f21a1d;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 15%;
+    border-color: #f21a1d;
+    text-align: center;
+    vertical-align: center;
+    font-size: 20px;
   }
 }
