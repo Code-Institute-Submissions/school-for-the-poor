@@ -2,7 +2,7 @@
 // this is the link to the json file with statement (question) data and initial values
 // credit to Guido Cecilio for helping to access the data through this method
 const CONFIG_ENDPOINT =
-  "https://KateParkin.github.io/supreme-couscous/data/config.json";
+  "https://junokili.github.io/school-for-the-poor/data/config.json";
 let config = null;
 let level = null;
 let currentIssue = 0;
