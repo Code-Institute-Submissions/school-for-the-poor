@@ -30,7 +30,8 @@ body {
 }
 .chalkboard {
   background: url("../images/chalkboard.jpg");
-  background-position: center;
+  background-position: center top;
+  background-size: cover;
   padding-top: 100px;
 }
 .long-divider {
