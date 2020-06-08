@@ -171,7 +171,7 @@ another through gameplay then on hitting “Restart” the user was taken back t
 level rather than the beginning of the current questions. After several failed attempts to rectify this, 
 it was decided to display a level complete congratulations and offer the option to move up to the next level. 
 
-- general tests
+- General tests
 
 The html and css files were validated through the W3C Markup Validator and did not throw up any issues that 
 haven’t been resolved. The JavaScript files were validated through JSHint with the only errors being the use of 
@@ -180,7 +180,7 @@ all invoked within other functions or button clicks, likewise the apparent undef
 and utilised. The two functions in scramble-game-w-json.js 
 referencing outer scoped variables work successfully, so haven’t been altered. 
 
-# deployment
+# Deployment
 
 The project can be accessed at https://github.com/junokili/school-for-the-poor
 
@@ -216,7 +216,7 @@ commit was made with the game working to the best of the developer’s current s
 as planned, a larger json database (but still small enough to allow a full game test) and a completed README file. 
 
 
-# credits
+# Credits
 
 - **content:** the content and code is the developer's own except where otherwise attributed  
 (and commented accordingly in scrable-game-w-json.js):
@@ -226,11 +226,11 @@ w3schools: teacher profile flip boxes modified from: https://www.w3schools.com/h
 - **font:** DK crayon crumble font is attributed to Hanoded:
 https://www.dafont.com/dk-crayon-crumble.font
 
-- **media:** the images used in this site are the developer’s own  
-    - the background chalkboard image is designed by Freepik:
+- **media:** the images used in this site are the developer’s own excluding:
+    - background chalkboard image is designed by Freepik:
 http://www.freepik.com
     - VectorStock: coming-soon.jpg https://www.vectorstock.com/royalty-free-vector/coming-soon-neon-sign-coming-soon-badge-in-vector-21133321
 
 - **acknowledgments:** the inspiration for this project has come from the life of the developer as an EFL teacher 
-and also a language learner. I’d like to thank my mentor for his suggestions to improve the site and greatly 
+and also a language learner. I’d like to thank my mentor, Guido Cecilio, for his suggestions to improve the site and greatly 
 assisting when I was stuck on the project. 
