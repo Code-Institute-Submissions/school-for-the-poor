@@ -40,9 +40,9 @@
                 ]
             },
             {
-                "statement": "Have you not done your homework yet ?",
+                "statement": "Have you not done your homework ?",
                 "answers": [
-                    "Have you not done your homework yet?", "Have you not yet done your homework?"
+                    "Have you not done your homework?"
                 ]
             }
         ]

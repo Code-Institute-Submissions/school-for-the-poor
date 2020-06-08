@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // this is the link to the json file with statement (question) data and initial values
 const CONFIG_ENDPOINT =
   "https://KateParkin.github.io/supreme-couscous/data/mini-config.json";
@@ -152,7 +153,7 @@ function start() {
 function revealTile(tile, val) {
   // for the length of the question (origArray) the index value is pushed into the div and displayed in
   // a different colour on click
-  if (tile.innerHTML == "" && tileValue.length < origArray.length) {
+  if (tile.innerHTML === "" && tileValue.length < origArray.length) {
     tile.style.background = "#fff";
     tile.style.color = "#f21a1d";
     tile.innerHTML = val;
@@ -263,6 +264,7 @@ function hideDiv() {
   var el = document.getElementById("start-button");
   el.classList.toggle("start");
 }
+
 
 function main() {
   getGameConfiguration().then((response) => {
