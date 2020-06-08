@@ -146,15 +146,15 @@ ul.navbar-nav > li.nav-item > a.custom-link:hover {
   font-size: 28px;
   margin: 15px;
 }
-#beginner {
+.beginner {
   background: #fef900;
   border-color: #fef900;
 }
-#intermediate {
+.intermediate {
   background: #03dddc;
   border-color: #03dddc;
 }
-#advanced {
+.advanced {
   background: #ff822e;
   border-color: #ff822e;
 }
@@ -197,16 +197,16 @@ button:focus {
   vertical-align: top;
 }
 .hidden {
-  height: 0;
-  width: 0;
-  border-radius: 0;
+  height: 0px;
+  width: 0px;
+  border-radius: 0px;
   font-size: 0px;
-  margin: 0;
+  margin: 0px;
   border-color: transparent;
   background: transparent;
   color: transparent;
   background-color: transparent;
-  padding: 0;
+  padding: 0px;
 }
 .swal-text {
   font-size: 32px;
@@ -319,42 +319,42 @@ p > a:hover {
 
 /*---------------- testimonials page ----------------- */
 #arifin {
-    background-image: url("../images/Arifin.png")
+  background-image: url("../images/Arifin.png");
 }
 #ruby {
-    background-image: url("../images/Caca.png")
+  background-image: url("../images/Caca.png");
 }
 #kania {
-    background-image: url("../images/Kania.png")
+  background-image: url("../images/Kania.png");
 }
 #misaki {
-    background-image: url("../images/Misaki.png")
+  background-image: url("../images/Misaki.png");
 }
 #nicho {
-    background-image: url("../images/Nicho.png");
+  background-image: url("../images/Nicho.png");
 }
 #jemmy {
-    background-image: url("../images/Jemmy.png");
+  background-image: url("../images/Jemmy.png");
 }
 .testimonial-photo {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    height: 100px;
-    width: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 100px;
+  width: 100px;
 }
 .testimonial-column {
-    margin: 20px 0px;
-    max-height: 350px;
+  margin: 20px 0px;
+  max-height: 350px;
 }
 
 /*---------------- contact-us page ----------------- */
 #contact {
-    color: #786e65;
-    max-width: 650px;
-    margin: 0 auto;
+  color: #373c47;
+  max-width: 650px;
+  margin: 0 auto;
 }
 /*---------------- footer ----------------- */
 .row {

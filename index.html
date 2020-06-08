@@ -58,28 +58,10 @@
       <h2 class="medium-text">Let's play !</h2>
       <h2 class="sm-text">Can you remember and unscramble the questions?</h2>
       <p class="sm-text hideable">First choose your level:</p>
-      <div id="level" class="col-12 col-md-8 mx-auto">
-        <button
-          class="button-level hideable"
-          id="beginner"
-          onclick="selectLevel('beginner')"
-        >
-          Beginner
-        </button>
-        <button
-          class="button-level hideable"
-          id="intermediate"
-          onclick="selectLevel('intermediate')"
-        >
-          Intermediate
-        </button>
-        <button
-          class="button-level hideable"
-          id="advanced"
-          onclick="selectLevel('advanced')"
-        >
-          Advanced
-        </button>
+      <div id="level" class="col-12 col-md-8 mx-auto hideable">
+        <button class="button-level hideable beginner" onclick="selectLevel('beginner')">Beginner</button>
+        <button class="button-level hideable intermediate" onclick="selectLevel('intermediate')">Intermediate</button>
+        <button class="button-level hideable advanced" onclick="selectLevel('advanced')">Advanced</button>
       </div>
       <div id="memory-game"></div>
       <div id="buttonDiv">
@@ -107,6 +89,8 @@
               <p class="white">
                 <i class="fa fa-envelope"></i> info@misskatesacademy.com
               </p>
+              <p><i class="fa fa-school"></i><a href="schools.html">visit us</a>
+              </p>
             </div>
             <div class="short-divider"></div>
           </div>
@@ -115,19 +99,19 @@
               <h2 class="white">See what we've been doing</h2>
               <ul class="list-inline white social">
                 <li class="list-inline-item">
-                  <a href="./images/coming-soon.jpg" target="_blank">
+                  <a href="images/coming-soon.jpg" target="_blank">
                     <i class="fab fa-facebook-square" aria-hidden="true"></i>
                     <span class="sr-only">Facebook </span>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="./images/coming-soon.jpg" target="_blank">
+                  <a href="images/coming-soon.jpg" target="_blank">
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                     <span class="sr-only">Instagram</span>
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="./images/coming-soon.jpg" target="_blank">
+                  <a href="images/coming-soon.jpg" target="_blank">
                     <i class="fab fa-linkedin" aria-hidden="true"></i>
                     <span class="sr-only">Linked In</span>
                   </a>
@@ -163,8 +147,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- <script type="text/javascript" src="js/get-json-data-level.js"></script> -->
     <script type="text/javascript" src="js/scramble-game-w-json.js"></script>
-    <!-- <script type="text/javascript" src="js/hide-div.js"></script> -->
   </body>
 </html>

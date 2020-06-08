@@ -56,7 +56,7 @@ function selectStatement(level, restart) {
       "Congratulations, you have completed the beginner level! Would you like to try another level to increase your skills?";
     el1.classList.add("sm-text");
         var el3 = "";
-    el3 += `<button class="button-level aqua" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
+    el3 += `<button class="button-level intermediate" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
     document.getElementById("completed").innerHTML = el3;
   }
 
@@ -68,7 +68,7 @@ function selectStatement(level, restart) {
       "Congratulations, you have completed the intermediate level! Would you like to try another level to increase your skills?";
     el1.classList.add("sm-text");
         var el3 = "";
-    el3 += `<button class="button-level orange" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
+    el3 += `<button class="button-level advanced" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
     document.getElementById("completed").innerHTML = el3;
   }
 
