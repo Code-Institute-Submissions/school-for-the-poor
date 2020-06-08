@@ -83,7 +83,7 @@ function selectStatement(level, restart) {
       "Get in touch to find out how to practice your skills some more!";
     el1.classList.add("sm-text");
     var el3 = "";
-    el3 += `<button class="button-level aqua" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/contact-us.html';">Contact us</button>`;
+    el3 += `<button class="button-level intermediate" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/contact-us.html';">Contact us</button>`;
     document.getElementById("completed").innerHTML = el3;
     swal({
       title: "Well done!",
