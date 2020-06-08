@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 // this is the link to the json file with statement (question) data and initial values
+// credit to Guido Cecilio for helping to access the data through this method
 const CONFIG_ENDPOINT =
-  "https://KateParkin.github.io/supreme-couscous/data/mini-config.json";
+  "https://KateParkin.github.io/supreme-couscous/data/config.json";
 let config = null;
 let level = null;
 let currentIssue = 0;
@@ -48,7 +49,7 @@ function selectStatement(level, restart) {
       allLevelsCompleted(); // player has completed all levels so change content
     }
   }
-
+// success message for beginner level
   function begLevelComplete() {
     var el = document.getElementById("buttonDiv");
     el.parentNode.removeChild(el);
@@ -60,7 +61,7 @@ function selectStatement(level, restart) {
     el3 += `<button class="button-level intermediate" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
     document.getElementById("completed").innerHTML = el3;
   }
-
+// success message for intermediate level
     function intLevelComplete() {
     var el = document.getElementById("buttonDiv");
     el.parentNode.removeChild(el);
@@ -73,7 +74,7 @@ function selectStatement(level, restart) {
     document.getElementById("completed").innerHTML = el3;
   }
 
-
+// success message for advanced level
   function allLevelsCompleted() {
     var el = document.getElementById("buttonDiv");
     el.parentNode.removeChild(el);
@@ -86,18 +87,19 @@ function selectStatement(level, restart) {
     document.getElementById("completed").innerHTML = el3;
     swal({
       title: "Well done!",
-      text: "You have completed all the levels",
+      text: "You have completed the hardest level",
       icon: "success",
     });
   }
 
+  //map of unscrambled question
   origString = issue.statement;
   ans = issue.answers[0];
   origMap.set(0, origString);
   origArray = origString.split(" ");
   tilesTurned = 0;
 }
-
+// changes level variable on completion of a level
 function moveUpLevel(currentLevel) {
   if (currentLevel === "beginner") {
     return "intermediate";
@@ -107,6 +109,7 @@ function moveUpLevel(currentLevel) {
   return null;
 }
 
+// play game on click
 function start() {
   // change the colour and text of the start button
   var element = document.getElementById("start-button");
@@ -231,6 +234,7 @@ function compareMaps(origMap, newMap) {
   }
 }
 
+//accesses json database before starting game
 function getGameConfiguration() {
   return new Promise((resolve, reject) => {
     $.getJSON(CONFIG_ENDPOINT)
@@ -256,6 +260,7 @@ Array.prototype.scramble = function () {
   }
 };
 
+// removes level options and initial text at start of game
 function hideDiv() {
   var elems = document.getElementsByClassName("hideable");
   for (var i = 0; i < elems.length; i++) {
@@ -265,7 +270,7 @@ function hideDiv() {
   el.classList.toggle("start");
 }
 
-
+// json data
 function main() {
   getGameConfiguration().then((response) => {
     config = response;
