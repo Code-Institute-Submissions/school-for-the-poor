@@ -1,6 +1,6 @@
 // this is the link to the json file with statement (question) data and initial values
 const CONFIG_ENDPOINT =
-  "https://junokili.github.io/school-for-the-poor/data/config.json";
+  "https://KateParkin.github.io/supreme-couscous/data/mini-config.json";
 let config = null;
 let level = null;
 let currentIssue = 0;
@@ -38,22 +38,50 @@ function selectStatement(level, restart) {
     level = moveUpLevel(level);
     if (level) {
       // at start of new level set question count to 0 then move onto next questions as before
-      currentIssue = 0;
-      issue = config[level].data[currentIssue++];
+      if (level === "intermediate") {
+        begLevelComplete();
+      } else if (level === "advanced") {
+        intLevelComplete();
+      }
     } else {
       allLevelsCompleted(); // player has completed all levels so change content
     }
   }
+
+  function begLevelComplete() {
+    var el = document.getElementById("buttonDiv");
+    el.parentNode.removeChild(el);
+       var el1 = document.getElementById("memory-game");
+    el1.innerHTML =
+      "Congratulations, you have completed the beginner level! Would you like to try another level to increase your skills?";
+    el1.classList.add("sm-text");
+        var el3 = "";
+    el3 += `<button class="button-level aqua" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
+    document.getElementById("completed").innerHTML = el3;
+  }
+
+    function intLevelComplete() {
+    var el = document.getElementById("buttonDiv");
+    el.parentNode.removeChild(el);
+       var el1 = document.getElementById("memory-game");
+    el1.innerHTML =
+      "Congratulations, you have completed the intermediate level! Would you like to try another level to increase your skills?";
+    el1.classList.add("sm-text");
+        var el3 = "";
+    el3 += `<button class="button-level orange" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/index.html';">Choose level</button>`;
+    document.getElementById("completed").innerHTML = el3;
+  }
+
 
   function allLevelsCompleted() {
     var el = document.getElementById("buttonDiv");
     el.parentNode.removeChild(el);
     var el1 = document.getElementById("memory-game");
     el1.innerHTML =
-      "Come and visit one of our schools to practice your skills some more!";
-    el1.classList.add("medium-text");
+      "Get in touch to find out how to practice your skills some more!";
+    el1.classList.add("sm-text");
     var el3 = "";
-    el3 += `<button class="button-level intermediate" onclick="window.location.href='https://KateParkin.github.io/supreme-couscous/index.html';">Contact us</button>`;
+    el3 += `<button class="button-level aqua" onclick="window.location.href='https://junokili.github.io/school-for-the-poor/contact-us.html';">Contact us</button>`;
     document.getElementById("completed").innerHTML = el3;
     swal({
       title: "Well done!",
@@ -206,7 +234,7 @@ function getGameConfiguration() {
   return new Promise((resolve, reject) => {
     $.getJSON(CONFIG_ENDPOINT)
       .done((json) => resolve(json))
-      .fail((jqxhr, textStatus, error) => {
+      .fail((textStatus, error) => {
         let msg = `Request Failed: ${textStatus}, ${error}`;
         console.log(msg);
         reject(msg);
