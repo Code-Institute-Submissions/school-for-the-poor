@@ -4,7 +4,6 @@ function removeFormSuccess(){
     var el2 = document.getElementById("contact-info");
     el2.parentNode.removeChild(el2);
     var el = "";
-    el += `<p>Thanks! We've received you're request and will be in touch shortly.</p>`;
+    el += `<p class="sm-text">Thanks! We've received your request and will be in touch shortly.</p>`;
       document.getElementById("email-success").innerHTML = el;
-    el.classList.add("sm-text");
 }
